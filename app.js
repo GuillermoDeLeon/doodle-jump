@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let doodlerBottomSpace = 250
     let platformCount = 5
     let isGameOver = false
+    let platforms = []
 
     function createDoodler() {
         grid.appendChild(doodler)
@@ -51,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!isGameOver) {
             createDoodler()
             createPlatforms()
-            movePlatforms()
+            setInterval(movePlatforms, 30)
         }
     }
 
